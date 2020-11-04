@@ -1,0 +1,689 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2637061292,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on todoMVC landing page",
+            "match": {
+              "location": "TodoSteps.redirect_ToLandingPage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 15411477047,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.Setup()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Add and remove items from todo list",
+        "description": "",
+        "id": "manage-todo-list-as-a-todomvc-user;add-and-remove-items-from-todo-list",
+        "after": [
+          {
+            "result": {
+              "duration": 1428231531,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2048749404,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I add following items in todo list:",
+            "match": {
+              "location": "TodoSteps.addItems_ToList(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Lunch"
+                ]
+              },
+              {
+                "cells": [
+                  "Grocery"
+                ]
+              },
+              {
+                "cells": [
+                  "Laundry"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 51048366,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I expect \"3\" items added in the todo list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3\"",
+                  "offset": 9
+                }
+              ],
+              "location": "TodoSteps.verify_ItemsInList(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1201052471,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I remove following items from todo list",
+            "match": {
+              "location": "TodoSteps.removeItems_FromList(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Laundry"
+                ]
+              },
+              {
+                "cells": [
+                  "Lunch"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 30414830,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I expect \"1\" items added in the todo list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 9
+                }
+              ],
+              "location": "TodoSteps.verify_ItemsInList(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1803789092,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on todoMVC landing page",
+            "match": {
+              "location": "TodoSteps.redirect_ToLandingPage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5161614485,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.Setup()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Mark items as completed from todo list",
+        "description": "",
+        "id": "manage-todo-list-as-a-todomvc-user;mark-items-as-completed-from-todo-list",
+        "after": [
+          {
+            "result": {
+              "duration": 1487559638,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1158242794,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I add following items in todo list:",
+            "match": {
+              "location": "TodoSteps.addItems_ToList(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Lunch"
+                ]
+              },
+              {
+                "cells": [
+                  "Grocery"
+                ]
+              },
+              {
+                "cells": [
+                  "Laundry"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 417231590,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I mark following items as completed from todo list",
+            "match": {
+              "location": "TodoSteps.markItems_Completed(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Lunch"
+                ]
+              },
+              {
+                "cells": [
+                  "Laundry"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 189510811,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I click on \"Completed\" section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Completed\"",
+                  "offset": 11
+                }
+              ],
+              "location": "TodoSteps.click_OnSection(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 124141682,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I expect following items to be available in \"Completed\" section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Completed\"",
+                  "offset": 44
+                }
+              ],
+              "location": "TodoSteps.verifyItems_InSection(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Lunch"
+                ]
+              },
+              {
+                "cells": [
+                  "Laundry"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 7231861766,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on todoMVC landing page",
+            "match": {
+              "location": "TodoSteps.redirect_ToLandingPage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4120565173,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.Setup()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "Move items from completed to active section",
+        "description": "",
+        "id": "manage-todo-list-as-a-todomvc-user;move-items-from-completed-to-active-section",
+        "after": [
+          {
+            "result": {
+              "duration": 4592298480,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2127978788,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I add following items in todo list:",
+            "match": {
+              "location": "TodoSteps.addItems_ToList(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Study"
+                ]
+              },
+              {
+                "cells": [
+                  "Cycling"
+                ]
+              },
+              {
+                "cells": [
+                  "Sleep"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 494685437,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I mark following items as completed from todo list",
+            "match": {
+              "location": "TodoSteps.markItems_Completed(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Study"
+                ]
+              },
+              {
+                "cells": [
+                  "Cycling"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 208130523,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "I click on \"Completed\" section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Completed\"",
+                  "offset": 11
+                }
+              ],
+              "location": "TodoSteps.click_OnSection(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 176473843,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "I move following items from \"Completed\" to \"Active\" section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Completed\"",
+                  "offset": 28
+                },
+                {
+                  "val": "\"Active\"",
+                  "offset": 43
+                }
+              ],
+              "location": "TodoSteps.move_Items(String,String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Study"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 137731079,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "I click on \"Active\" section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Active\"",
+                  "offset": 11
+                }
+              ],
+              "location": "TodoSteps.click_OnSection(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 111082850,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I expect following items to be available in \"Active\" section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Active\"",
+                  "offset": 44
+                }
+              ],
+              "location": "TodoSteps.verifyItems_InSection(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Study"
+                ]
+              },
+              {
+                "cells": [
+                  "Sleep"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5011637153,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on todoMVC landing page",
+            "match": {
+              "location": "TodoSteps.redirect_ToLandingPage()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4962457586,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.Setup()"
+            }
+          }
+        ],
+        "line": 46,
+        "name": "Clear completed items from todo list",
+        "description": "",
+        "id": "manage-todo-list-as-a-todomvc-user;clear-completed-items-from-todo-list",
+        "after": [
+          {
+            "result": {
+              "duration": 670938844,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AbstractBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 827059382,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I add following items in todo list:",
+            "match": {
+              "location": "TodoSteps.addItems_ToList(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Movie"
+                ]
+              },
+              {
+                "cells": [
+                  "Gym"
+                ]
+              },
+              {
+                "cells": [
+                  "Lunch"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 320482443,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "I mark following items as completed from todo list",
+            "match": {
+              "location": "TodoSteps.markItems_Completed(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Gym"
+                ]
+              },
+              {
+                "cells": [
+                  "Lunch"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 190870910,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "I click on \"Completed\" section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Completed\"",
+                  "offset": 11
+                }
+              ],
+              "location": "TodoSteps.click_OnSection(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 74380235,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I clear completed items",
+            "match": {
+              "location": "TodoSteps.clear_completedItems()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 107427805,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "I click on \"All\" section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All\"",
+                  "offset": 11
+                }
+              ],
+              "location": "TodoSteps.click_OnSection(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 58420035,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "I expect following items to be available in \"All\" section",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"All\"",
+                  "offset": 44
+                }
+              ],
+              "location": "TodoSteps.verifyItems_InSection(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Movie"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Manage todo list as a todoMVC user",
+    "description": "",
+    "id": "manage-todo-list-as-a-todomvc-user",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/singtel/features/todos.feature",
+    "tags": []
+  }
+]

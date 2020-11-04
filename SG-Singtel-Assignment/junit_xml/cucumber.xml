@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="64.580198">
+    <testcase classname="Manage todo list as a todoMVC user" name="Add and remove items from todo list" time="22.811564">
+        <system-out>
+            <![CDATA[Given I am on todoMVC landing page..........................................passed
+When I add following items in todo list:....................................passed
+Then I expect "3" items added in the todo list..............................passed
+When I remove following items from todo list................................passed
+Then I expect "1" items added in the todo list..............................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manage todo list as a todoMVC user" name="Mark items as completed from todo list" time="10.342765">
+        <system-out>
+            <![CDATA[Given I am on todoMVC landing page..........................................passed
+When I add following items in todo list:....................................passed
+And I mark following items as completed from todo list......................passed
+And I click on "Completed" section..........................................passed
+Then I expect following items to be available in "Completed" section........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manage todo list as a todoMVC user" name="Move items from completed to active section" time="19.201664">
+        <system-out>
+            <![CDATA[Given I am on todoMVC landing page..........................................passed
+When I add following items in todo list:....................................passed
+And I mark following items as completed from todo list......................passed
+And I click on "Completed" section..........................................passed
+And I move following items from "Completed" to "Active" section.............passed
+And I click on "Active" section.............................................passed
+Then I expect following items to be available in "Active" section...........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Manage todo list as a todoMVC user" name="Clear completed items from todo list" time="12.224205">
+        <system-out>
+            <![CDATA[Given I am on todoMVC landing page..........................................passed
+When I add following items in todo list:....................................passed
+And I mark following items as completed from todo list......................passed
+And I click on "Completed" section..........................................passed
+And I clear completed items.................................................passed
+And I click on "All" section................................................passed
+Then I expect following items to be available in "All" section..............passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
